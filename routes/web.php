@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', 'App\Http\Controllers\ContactController@show');
+Route::post('/contact', 'App\Http\Controllers\ContactController@store');
 
 Auth::routes();
 

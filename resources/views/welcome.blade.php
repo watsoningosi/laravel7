@@ -38,6 +38,7 @@
             </div>
         @endif
 
+        <a class="btn btn-success" href="/contact">Contact</a>
         <div class="container">
             <form method="POST" action="">
                 @csrf
