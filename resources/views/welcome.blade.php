@@ -40,14 +40,17 @@
 
         <a class="btn btn-success" href="/contact">Contact</a>
         <div class="container">
-            <form method="POST" action="">
+            <form method="POST" action="/welcome">
                 @csrf
 
                 <div class="row mb-3">
                     <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                     <div class="col-md-6">
-                        <input id="email" type="email" class="form-control" name="email">
+                        <input id="email" type="text" class="form-control" name="email">
+                        @error('email')
+                            <div class="row mb-3 text-xs-center" style="color:red">{{ $message }}</div>
+                        @enderror
 
                     </div>
                 </div>
@@ -57,6 +60,11 @@
                         <button type="submit" class="btn btn-primary">
                             {{ __('Send Email') }}
                         </button>
+                        @if (session('message'))
+                            <p class="" style="color:green">
+                                {{ session('message') }}
+                            </p>
+                        @endif
                     </div>
                 </div>
             </form>

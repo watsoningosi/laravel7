@@ -21,6 +21,8 @@ Route::get('/', function () {
 Route::get('/contact', 'App\Http\Controllers\ContactController@show');
 Route::post('/contact', 'App\Http\Controllers\ContactController@store');
 
+Route::post('/welcome', 'App\Http\Controllers\HomeController@store');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
