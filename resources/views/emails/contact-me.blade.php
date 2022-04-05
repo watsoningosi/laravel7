@@ -1,4 +1,44 @@
-<!DOCTYPE html>
+@component('mail::message')
+    # Watstar Developers Inc.
+
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic possimus rerum quae non in, officiis ad deserunt veritatis
+    consectetur. Recusandae itaque nesciunt earum ab eum cumque quos autem adipisci quo.
+
+    -Laravel
+    -Python
+    -php
+    -JavaScript
+    @component('mail::button', ['url' => 'http://mizizifoundation.epizy.com'])
+        Visit our Foundation
+    @endcomponent
+
+
+@endcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,4 +53,4 @@
     <p> You wan to hear more about me</p>
 </body>
 
-</html>
+</html> -->
