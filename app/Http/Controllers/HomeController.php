@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMe;
 use App\Models\Home;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -38,11 +39,14 @@ class HomeController extends Controller
     {
         Request()->validate(['email' => 'required|email']);
 
-        Mail::raw('Watson Did it', function ($message) {
+        Mail::to(request('email'))
+            ->send(new ContactMe('Pro'));
 
-            $message->to(request('email'))
-                ->subject('How you doing');
-        });
+        // Mail::raw('Watson Did it', function ($message) {
+
+        //     $message->to(request('email'))
+        //          ->subject('How you doing');
+        // });
         return redirect('/')
             ->with('message', 'Email Sent');
     }
