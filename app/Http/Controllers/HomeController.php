@@ -44,7 +44,7 @@ class HomeController extends Controller
                 ->subject('How you doing');
         });
         return redirect('/')
-        -> with('message', 'Email Sent');
+            ->with('message', 'Email Sent');
     }
 
 
